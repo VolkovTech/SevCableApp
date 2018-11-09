@@ -25,7 +25,7 @@ import com.vk.sdk.api.model.VKList;
 
 import org.json.JSONException;
 
-public class VkAuthActivity extends AppCompatActivity implements IVkAuthActivity {
+public class VkAuthActivity extends AppCompatActivity {
 
     private String[] scope = new String[] {VKScope.FRIENDS};
 //    private APIClient client = new APIClient();
@@ -71,20 +71,13 @@ public class VkAuthActivity extends AppCompatActivity implements IVkAuthActivity
         }
     }
 
-    private void saveInfoToSharedPref(String id) {
-        SharedPreferences sharedPref = getSharedPreferences("userId", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("id", id);
-        editor.apply();
-    }
-
     private void intentToMainActivity() {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
 
     private void intentToWelcomeActivity() {
-        Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
+        //startActivity(intent);
     }
 }

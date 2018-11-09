@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SevCableApp</string>
+
+    <!--Welcome activity-->
+    <string name="welcome_title">Порт Севкабель</string>
+    <string name="welcome_subtitle_1">общественное пространство в</string>
+    <string name="welcome_subtitle_2">Гавани Васильевского острова</string>
 </resources>

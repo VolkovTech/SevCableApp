@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".View.Activity.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/welcome_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo_sevcable_white"/>
+
+    <TextView
+        android:id="@+id/welcome_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/welcome_image"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:text="@string/welcome_subtitle_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_subtitle"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:text="@string/welcome_subtitle_2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/waves"/>
+
+    <Button
+        android:id="@+id/userLoginButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/rounded_login_button"
+        android:stateListAnimator="@null"
+        android:text="Войти через "
+        android:elevation="5dp"
+        android:drawableRight="@drawable/vk_button_logo"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/residentLoginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:stateListAnimator="@null"
+        android:text="Вход для резидентов"
+        android:elevation="5dp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+</RelativeLayout>
