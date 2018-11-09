@@ -5,4 +5,7 @@
     <string name="welcome_title">Порт Севкабель</string>
     <string name="welcome_subtitle_1">общественное пространство в</string>
     <string name="welcome_subtitle_2">Гавани Васильевского острова</string>
+
+
+    <integer name="com_vk_sdk_AppId">6746983</integer>
 </resources>

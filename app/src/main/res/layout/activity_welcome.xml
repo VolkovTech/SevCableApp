@@ -36,10 +36,11 @@
         android:text="@string/welcome_subtitle_2" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="374dp"
+        android:layout_height="222dp"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/waves"/>
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/welcome_waves" />
 
     <Button
         android:id="@+id/userLoginButton"
@@ -54,6 +55,7 @@
         android:text="Войти через "
         android:elevation="5dp"
         android:drawableRight="@drawable/vk_button_logo"
+        android:onClick="userLoginButtonClick"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="16sp" />
@@ -69,6 +71,7 @@
         android:stateListAnimator="@null"
         android:text="Вход для резидентов"
         android:elevation="5dp"
+        android:onClick="residentLoginButtonClick"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp" />
