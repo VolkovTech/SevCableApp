@@ -36,8 +36,8 @@
         android:text="@string/welcome_subtitle_2" />
 
     <ImageView
-        android:layout_width="374dp"
-        android:layout_height="222dp"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
         android:src="@drawable/welcome_waves" />

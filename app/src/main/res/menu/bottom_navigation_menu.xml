@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navCusSearch"
+        android:icon="@drawable/cus_search"
+        android:title="" />
+    <item
+        android:id="@+id/navCusFeed"
+        android:icon="@drawable/cus_feed"
+        android:title="" />
+    <item
+        android:id="@+id/navCusFavorite"
+        android:icon="@drawable/cus_favorite"
+        android:title="" />
+</menu>

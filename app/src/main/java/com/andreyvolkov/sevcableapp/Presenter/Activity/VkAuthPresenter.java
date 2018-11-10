@@ -1,5 +1,6 @@
 package com.andreyvolkov.sevcableapp.Presenter.Activity;
 
+import com.andreyvolkov.sevcableapp.Model.Activity.VkAuthModel.IVkAuthModel;
 import com.andreyvolkov.sevcableapp.Model.Activity.VkAuthModel.VkAuthModel;
 import com.andreyvolkov.sevcableapp.View.Activity.VkAuthActivity;
 import com.vk.sdk.api.model.VKList;
@@ -13,8 +14,8 @@ public class VkAuthPresenter implements IVkAuthPresenter {
     }
 
     @Override
-    public void onVkAuthResult(VKList vkList) {
-        VkAuthModel vkAuthModel = new VkAuthModel();
-        vkAuthModel.createNewUser(vkList);
+    public void onRequestSend(String userId) {
+        IVkAuthModel vkAuthModel = new VkAuthModel();
+        vkAuthModel.sendRequest(userId);
     }
 }

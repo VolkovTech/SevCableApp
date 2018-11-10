@@ -28,7 +28,6 @@ import org.json.JSONException;
 public class VkAuthActivity extends AppCompatActivity {
 
     private String[] scope = new String[] {VKScope.FRIENDS};
-//    private APIClient client = new APIClient();
     private IVkAuthPresenter vkAuthPresenter;
 
     @Override
@@ -55,7 +54,7 @@ public class VkAuthActivity extends AppCompatActivity {
                     public void onComplete(VKResponse response) {
                         super.onComplete(response);
                         VKList vkList = (VKList) response.parsedModel;
-                        vkAuthPresenter.onVkAuthResult(vkList);
+                        onVkAuthResult(vkList);
                         intentToMainActivity();
                     }
                 });
@@ -71,13 +70,45 @@ public class VkAuthActivity extends AppCompatActivity {
         }
     }
 
-    private void intentToMainActivity() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+    private void intentToWelcomeActivity() {
+        Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
         startActivity(intent);
     }
 
-    private void intentToWelcomeActivity() {
-        //Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
-        //startActivity(intent);
+    private void onVkAuthResult(VKList vkList) {
+        try {
+            String ownerId = (String) vkList.get(0).fields.getString("id");
+            String ownerFullName = (String) vkList.get(0).fields.getString("first_name")
+                    + " " + (String) vkList.get(0).fields.getString("last_name");
+
+            // posting user to db via request
+            vkAuthPresenter.onRequestSend(ownerId);
+
+            saveInfoToSharedPref(ownerId, ownerFullName);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void saveInfoToSharedPref(String id, String userName) {
+        SharedPreferences sharedPref = getSharedPreferences("userId", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("id", id);
+        editor.putString("userName", userName);
+        editor.apply();
+    }
+
+    private String getSP() {
+        SharedPreferences sharedPref = getSharedPreferences("role", Context.MODE_PRIVATE);
+        return sharedPref.getString("user", null);
+    }
+
+    private void intentToMainActivity() {
+        Intent intent;
+        if (getSP() != null)
+            intent = new Intent(getApplicationContext(), CustomerActivity.class);
+        else
+            intent = new Intent(getApplicationContext(), CustomerActivity.class); // change to retailer
+        startActivity(intent);
     }
 }
