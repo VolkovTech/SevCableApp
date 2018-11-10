@@ -16,7 +16,9 @@ import android.view.MenuItem;
 import android.widget.Toolbar;
 
 import com.andreyvolkov.sevcableapp.R;
+import com.andreyvolkov.sevcableapp.View.Fragment.CustomerFavoritesFragment;
 import com.andreyvolkov.sevcableapp.View.Fragment.CustomerNewsfeedFragment;
+import com.andreyvolkov.sevcableapp.View.Fragment.CustomerSearchFragment;
 import com.andreyvolkov.sevcableapp.View.Helper.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -74,7 +76,7 @@ public class CustomerActivity extends AppCompatActivity {
                     Fragment selectedFragment = null;
                     switch (item.getItemId()) {
                         case R.id.navCusSearch:
-//                            selectedFragment = new VerifiedSearchFragment();
+                            selectedFragment = new CustomerSearchFragment();
                             getSupportActionBar().setTitle("Поиск");
                             break;
                         case R.id.navCusFeed:
@@ -82,11 +84,10 @@ public class CustomerActivity extends AppCompatActivity {
                             getSupportActionBar().setTitle("Все мероприятия");
                             break;
                         case R.id.navCusFavorite:
-//                            selectedFragment = new BetweenSearchFragment();
+                            selectedFragment = new CustomerFavoritesFragment();
                             getSupportActionBar().setTitle("Мои мероприятия");
                             break;
                     }
-                    selectedFragment = new CustomerNewsfeedFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.customer_container, selectedFragment).commit();
                     return true;
                 }

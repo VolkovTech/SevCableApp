@@ -27,7 +27,7 @@ import org.json.JSONException;
 
 public class VkAuthActivity extends AppCompatActivity {
 
-    private String[] scope = new String[] {VKScope.FRIENDS};
+    private String[] scope = new String[] {VKScope.GROUPS, VKScope.WALL};
     private IVkAuthPresenter vkAuthPresenter;
 
     @Override

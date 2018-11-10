@@ -29,15 +29,20 @@ public class CustomerNewsfeedFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.customer_newsfeed_layout, container, false);
         init(view);
-
+        initRecyclerView();
         return view;
     }
 
     private void init(View view) {
-        recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView = view.findViewById(R.id.customerNewsfeedRecyclerView);
     }
 
     public void initRecyclerView(){
+        for (int i = 0; i < 10; i++) {
+            eventNames.add("Имя мероприятия");
+            eventDescriptions.add("Описание приложения");
+            eventDates.add("24 ноября, утро");
+        }
         CustomerRecyclerViewAdapter adapter = new CustomerRecyclerViewAdapter(
                 getContext(), eventNames, eventDescriptions, eventDates);
         recyclerView.setAdapter(adapter);
