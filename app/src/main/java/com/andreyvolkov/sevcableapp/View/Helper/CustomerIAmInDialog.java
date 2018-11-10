@@ -44,13 +44,13 @@ public class CustomerIAmInDialog extends AppCompatDialogFragment {
             }
         });
 
-        builder.setView(view)
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
+        builder.setView(view);
+//                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                    }
+//                });
         return builder.create();
 
 //        return super.onCreateDialog(savedInstanceState);

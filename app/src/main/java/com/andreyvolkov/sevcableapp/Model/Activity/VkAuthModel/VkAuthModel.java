@@ -25,23 +25,25 @@ public class VkAuthModel implements IVkAuthModel {
     private ArrayList<String> eventNames = new ArrayList<>();
     private ArrayList<String> eventDescriptions = new ArrayList<>();
     private ArrayList<String> eventDates = new ArrayList<>();
+    private ArrayList<String> imageViews = new ArrayList<>();
 
     public ArrayList<String> getNames() {
         return eventNames;
     }
-
     public ArrayList<String> getDescription() {
         return eventDescriptions;
     }
-
     public ArrayList<String> getDates() {
         return eventDates;
     }
+    public ArrayList<String> getImages() {
+        return imageViews;
+    }
 
-    String baseURL = "http://9d5432d8.ngrok.io/";
-    String user = "register?vkId=";
-    String wall = "getWall?vkId=";
-    JSONParseHelper parser = new JSONParseHelper();
+    private String baseURL = "http://9d5432d8.ngrok.io/";
+    private String user = "register?vkId=";
+    private String wall = "getWall?vkId=";
+    private JSONParseHelper parser = new JSONParseHelper();
 
     @Override
     public void sendSignInRequest(String userId) {
@@ -90,7 +92,6 @@ public class VkAuthModel implements IVkAuthModel {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                System.out.print("Hello");
                 e.printStackTrace();
             }
 
@@ -109,7 +110,6 @@ public class VkAuthModel implements IVkAuthModel {
                     } else {
                         makeListsNull();
                     }
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -122,6 +122,7 @@ public class VkAuthModel implements IVkAuthModel {
             eventNames.add(result.get(i).get("title"));
             eventDescriptions.add(result.get(i).get("shortDescription"));
             eventDates.add("22 ноября, утро");
+            imageViews.add("https://img.fonwall.ru/o/5y/eiffel-tower-paris-france-eyfeleva-bashnya-7n74.jpg");
         }
     }
 

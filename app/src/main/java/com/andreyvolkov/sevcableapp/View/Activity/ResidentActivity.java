@@ -47,8 +47,7 @@ public class ResidentActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Все мероприятия");
-
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SimpleSearchFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.resident_container, new ResidentStatisticFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -70,7 +69,7 @@ public class ResidentActivity extends AppCompatActivity {
                             getSupportActionBar().setTitle("Ещё что-то)");
                             break;
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.customer_container, selectedFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.resident_container, selectedFragment).commit();
                     return true;
                 }
             };

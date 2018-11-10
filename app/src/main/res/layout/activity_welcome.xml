@@ -9,6 +9,12 @@
     tools:context=".View.Activity.WelcomeActivity">
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_waves"/>
+
+    <ImageView
         android:id="@+id/welcome_image"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -27,6 +33,7 @@
         android:text="@string/welcome_subtitle_1" />
 
     <TextView
+        android:id="@+id/welcome_subtitle_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/welcome_subtitle"
@@ -34,13 +41,6 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorWhite"
         android:text="@string/welcome_subtitle_2" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="215dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
-        android:src="@drawable/welcome_waves" />
 
     <Button
         android:id="@+id/userLoginButton"
@@ -73,7 +73,7 @@
         android:elevation="5dp"
         android:onClick="residentLoginButtonClick"
         android:textAllCaps="false"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp" />
 
 </RelativeLayout>

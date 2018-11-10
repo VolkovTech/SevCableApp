@@ -27,6 +27,7 @@ public class CustomerNewsfeedFragment extends Fragment {
     private ArrayList<String> eventNames = new ArrayList<>();
     private ArrayList<String> eventDescriptions = new ArrayList<>();
     private ArrayList<String> eventDates = new ArrayList<>();
+    private ArrayList<String> imageViews = new ArrayList<>();
 
     private RecyclerView recyclerView;
 
@@ -87,12 +88,19 @@ public class CustomerNewsfeedFragment extends Fragment {
     }
 
     public void initRecyclerView(){
-        eventNames = model.getNames();
-        eventDescriptions = model.getDescription();
-        eventDates = model.getDates();
+//        eventNames = model.getNames();
+//        eventDescriptions = model.getDescription();
+//        eventDates = model.getDates();
+//        imageViews = model.getImages();
+        for (int i = 0; i < 10; i++) {
+            eventNames.add("Название мероприятия");
+            eventDescriptions.add("Очень пдробное описание мероприятия");
+            eventDates.add("29 ноября, 21:00");
+            imageViews.add("http://getwallpapers.com/wallpaper/full/6/9/c/378569.jpg");
+        }
 
         CustomerRecyclerViewAdapter adapter = new CustomerRecyclerViewAdapter(
-                getContext(), eventNames, eventDescriptions, eventDates);
+                getContext(), eventNames, eventDescriptions, eventDates, imageViews);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
     }

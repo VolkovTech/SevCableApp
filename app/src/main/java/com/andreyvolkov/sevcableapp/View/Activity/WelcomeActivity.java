@@ -3,6 +3,7 @@ package com.andreyvolkov.sevcableapp.View.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,8 +25,16 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void init() {
+        TextView welcome_subtitle = findViewById(R.id.welcome_subtitle);
+        TextView welcome_subtitle_2 = findViewById(R.id.welcome_subtitle_2);
         userLoginButton = findViewById(R.id.userLoginButton);
         residentLoginButton = findViewById(R.id.residentLoginButton);
+
+        Typeface skRegular = Typeface.createFromAsset(getAssets(), "fonts/AkzidenzGroteskPro-Regular.ttf");
+        welcome_subtitle.setTypeface(skRegular);
+        welcome_subtitle_2.setTypeface(skRegular);
+        userLoginButton.setTypeface(skRegular);
+        residentLoginButton.setTypeface(skRegular);
     }
 
     public void userLoginButtonClick(View view) {

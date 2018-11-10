@@ -3,6 +3,7 @@ package com.andreyvolkov.sevcableapp.View.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.PorterDuff;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 import com.andreyvolkov.sevcableapp.R;
 import com.andreyvolkov.sevcableapp.View.Fragment.Customer.CustomerFavoritesFragment;
@@ -24,6 +26,7 @@ public class CustomerActivity extends AppCompatActivity {
 
     private static final int ACTIVITY_NUM = 1;
     private Toolbar toolbar;
+    private Typeface skRegular;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +44,13 @@ public class CustomerActivity extends AppCompatActivity {
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+        skRegular = Typeface.createFromAsset(getAssets(), "fonts/AkzidenzGroteskPro-Regular.ttf");
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Все мероприятия");
 
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SimpleSearchFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.customer_container, new CustomerNewsfeedFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =

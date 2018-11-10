@@ -3,16 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="5dp"
-    android:background="@drawable/customer_rounded_dialog_layout">
+    android:elevation="5dp">
 
     <ImageView
         android:id="@+id/customerDialogClose"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
-        android:src="@drawable/close"/>
+        android:layout_margin="20dp"
+        android:src="@drawable/close" />
 
     <ImageView
         android:id="@+id/customerEventImage"
