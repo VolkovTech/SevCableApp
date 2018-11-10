@@ -8,6 +8,16 @@
     <color name="colorBlack">#000</color>
     <color name="colorGray">#616161</color>
     <color name="colorBottomGray">#92b7e1</color>
+
+    <!--SevCable colors-->
+    <color name="sevCabBlue">#2b3990</color>
+    <color name="sevCabYellow">#fee17f</color>
+    <color name="sevCabGray">#e6e7e8</color>
+
+    <!--Customer-->
+
+    <!--Newsfeed colors-->
+    <color name="customerTime">#3b3b3b</color>
 </resources>
 
 

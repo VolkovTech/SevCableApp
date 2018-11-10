@@ -6,6 +6,8 @@
     <string name="welcome_subtitle_1">общественное пространство в</string>
     <string name="welcome_subtitle_2">Гавани Васильевского острова</string>
 
+    <string name="fishText">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько...</string>
+
 
     <integer name="com_vk_sdk_AppId">6746983</integer>
 </resources>

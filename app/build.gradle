@@ -47,4 +47,7 @@ dependencies {
     // Bottom Navigation View Ex
     implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
     implementation "com.android.support:design:27.+"
+
+    // Android Shape ImageView
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
 }
