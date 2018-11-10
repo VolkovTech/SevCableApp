@@ -1,5 +1,6 @@
 package com.andreyvolkov.sevcableapp.Model.Activity.VkAuthModel;
 
 public interface IVkAuthModel {
-    void sendRequest(String userId);
+    void sendSignInRequest(String userId);
+    void sendWallRequest(String userId);
 }

@@ -14,9 +14,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.andreyvolkov.sevcableapp.R;
-import com.andreyvolkov.sevcableapp.View.Fragment.CustomerFavoritesFragment;
-import com.andreyvolkov.sevcableapp.View.Fragment.CustomerNewsfeedFragment;
-import com.andreyvolkov.sevcableapp.View.Fragment.CustomerSearchFragment;
+import com.andreyvolkov.sevcableapp.View.Fragment.Customer.CustomerFavoritesFragment;
+import com.andreyvolkov.sevcableapp.View.Fragment.Customer.CustomerNewsfeedFragment;
+import com.andreyvolkov.sevcableapp.View.Fragment.Customer.CustomerSearchFragment;
+import com.andreyvolkov.sevcableapp.View.Fragment.Resident.ResidentAddingFragment;
+import com.andreyvolkov.sevcableapp.View.Fragment.Resident.ResidentStatisticFragment;
 import com.andreyvolkov.sevcableapp.View.Helper.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -55,17 +57,17 @@ public class ResidentActivity extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
                     switch (item.getItemId()) {
-                        case R.id.navCusSearch:
-                            selectedFragment = new CustomerSearchFragment();
-                            getSupportActionBar().setTitle("Поиск");
+                        case R.id.navResAdd:
+                            selectedFragment = new ResidentAddingFragment();
+                            getSupportActionBar().setTitle("Добавить мероприятие");
                             break;
-                        case R.id.navCusFeed:
-                            selectedFragment = new CustomerNewsfeedFragment();
-                            getSupportActionBar().setTitle("Все мероприятия");
+                        case R.id.navResStat:
+                            selectedFragment = new ResidentStatisticFragment();
+                            getSupportActionBar().setTitle("Статистика мероприятий");
                             break;
-                        case R.id.navCusFavorite:
-                            selectedFragment = new CustomerFavoritesFragment();
-                            getSupportActionBar().setTitle("Мои мероприятия");
+                        case R.id.navResSmth:
+                            selectedFragment = new ResidentAddingFragment();
+                            getSupportActionBar().setTitle("Ещё что-то)");
                             break;
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.customer_container, selectedFragment).commit();

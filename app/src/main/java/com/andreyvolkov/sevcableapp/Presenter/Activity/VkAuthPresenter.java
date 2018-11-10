@@ -16,6 +16,13 @@ public class VkAuthPresenter implements IVkAuthPresenter {
     @Override
     public void onRequestSend(String userId) {
         IVkAuthModel vkAuthModel = new VkAuthModel();
-        vkAuthModel.sendRequest(userId);
+        vkAuthModel.sendSignInRequest(userId);
     }
+
+    @Override
+    public void onRequestWallSend(String userId) {
+        IVkAuthModel vkAuthModel = new VkAuthModel();
+        vkAuthModel.sendWallRequest(userId);
+    }
+
 }

@@ -1,8 +1,6 @@
 package com.andreyvolkov.sevcableapp.View.Activity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -16,9 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.andreyvolkov.sevcableapp.R;
-import com.andreyvolkov.sevcableapp.View.Fragment.CustomerFavoritesFragment;
-import com.andreyvolkov.sevcableapp.View.Fragment.CustomerNewsfeedFragment;
-import com.andreyvolkov.sevcableapp.View.Fragment.CustomerSearchFragment;
+import com.andreyvolkov.sevcableapp.View.Fragment.Customer.CustomerFavoritesFragment;
+import com.andreyvolkov.sevcableapp.View.Fragment.Customer.CustomerNewsfeedFragment;
+import com.andreyvolkov.sevcableapp.View.Fragment.Customer.CustomerSearchFragment;
 import com.andreyvolkov.sevcableapp.View.Helper.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -70,7 +68,7 @@ public class CustomerActivity extends AppCompatActivity {
                             getSupportActionBar().setTitle("Мои мероприятия");
                             break;
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.resident_container, selectedFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.customer_container, selectedFragment).commit();
                     return true;
                 }
             };
