@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SevCableApp</string>
+    <string name="app_name">Севкабель</string>
 
     <!--Welcome activity-->
     <string name="welcome_title">Порт Севкабель</string>
