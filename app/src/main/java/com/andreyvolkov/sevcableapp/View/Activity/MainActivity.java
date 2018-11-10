@@ -31,6 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
     private String getRoleFromSharedPref() {
         SharedPreferences sharedPref = getSharedPreferences("role", Context.MODE_PRIVATE);
-        return sharedPref.getString("user", null);
+        return sharedPref.getString("role", null);
     }
 }

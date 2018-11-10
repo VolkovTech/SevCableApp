@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.andreyvolkov.sevcableapp.R;
+import com.andreyvolkov.sevcableapp.View.Fragment.CustomerNewsfeedFragment;
 import com.andreyvolkov.sevcableapp.View.Helper.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -68,13 +69,14 @@ public class CustomerActivity extends AppCompatActivity {
 //                            selectedFragment = new VerifiedSearchFragment();
                             break;
                         case R.id.navCusFeed:
-//                            selectedFragment = new SimpleSearchFragment();
+                            selectedFragment = new CustomerNewsfeedFragment();
                             break;
                         case R.id.navCusFavorite:
 //                            selectedFragment = new BetweenSearchFragment();
                             break;
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+                    selectedFragment = new CustomerNewsfeedFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.customer_container, selectedFragment).commit();
                     return true;
                 }
             };

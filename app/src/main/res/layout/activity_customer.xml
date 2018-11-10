@@ -8,7 +8,7 @@
     tools:context=".View.Activity.CustomerActivity">
 
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/customer_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomNavigation" />
@@ -16,10 +16,10 @@
     <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         app:itemIconTint="@color/bottom_item_foreground"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/colorPrimary"
         app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>
