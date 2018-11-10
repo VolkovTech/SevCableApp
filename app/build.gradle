@@ -50,4 +50,7 @@ dependencies {
 
     // Android Shape ImageView
     implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+
+    // SparkButton
+    implementation 'com.github.varunest:sparkbutton:1.0.6'
 }

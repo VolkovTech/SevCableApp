@@ -15,8 +15,10 @@
     <color name="sevCabGray">#e6e7e8</color>
 
     <!--Customer-->
+    <color name="cusPrimaryColor">#fe9e4a</color>
+    <color name="cusSecondaryColor">#fe4a56</color>
 
-    <!--Newsfeed colors-->
+    <!--NewsFeed colors-->
     <color name="customerTime">#3b3b3b</color>
 </resources>
 

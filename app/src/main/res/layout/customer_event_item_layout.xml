@@ -43,9 +43,24 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/customer_rounded_time"
             android:padding="5dp"
-            android:text="12 ноября, день"
+            android:text="12 ноября, ночь"
             android:textColor="@color/colorBlack"
             android:textSize="12sp" />
+
+        <com.varunest.sparkbutton.SparkButton
+            android:id="@+id/spark_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="-5dp"
+            android:layout_marginBottom="-5dp"
+            android:layout_alignParentRight="true"
+            app:sparkbutton_activeImage="@drawable/cus_active_image"
+            app:sparkbutton_inActiveImage="@drawable/cus_inactive_image"
+            app:sparkbutton_iconSize="30dp"
+            android:layout_alignParentBottom="true"
+            app:sparkbutton_primaryColor="@color/cusPrimaryColor"
+            app:sparkbutton_secondaryColor="@color/cusSecondaryColor" />
+
     </RelativeLayout>
 
 </RelativeLayout>
