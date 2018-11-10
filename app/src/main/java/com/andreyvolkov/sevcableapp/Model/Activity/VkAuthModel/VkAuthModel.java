@@ -2,7 +2,7 @@ package com.andreyvolkov.sevcableapp.Model.Activity.VkAuthModel;
 
 import android.util.Log;
 
-import com.andreyvolkov.sevcableapp.Model.JSONHelper.JSONParseHelper;
+import com.andreyvolkov.sevcableapp.Model.JSONParseHelper;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,16 +11,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -100,7 +90,7 @@ public class VkAuthModel implements IVkAuthModel {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-
+                System.out.print("Hello");
                 e.printStackTrace();
             }
 
@@ -130,8 +120,8 @@ public class VkAuthModel implements IVkAuthModel {
     private void fillLists(ArrayList<HashMap<String, String>> result) {
         for (int i = 0; i < result.size(); i++) {
             eventNames.add(result.get(i).get("title"));
-            eventDescriptions.add(result.get(i).get("shortDescriptions"));
-            eventDates.add(result.get(i).get("22 ноября, утро"));
+            eventDescriptions.add(result.get(i).get("shortDescription"));
+            eventDates.add("22 ноября, утро");
         }
     }
 

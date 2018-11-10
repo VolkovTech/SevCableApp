@@ -16,8 +16,6 @@ public class WelcomeActivity extends AppCompatActivity {
     Button userLoginButton;
     TextView residentLoginButton;
 
-    private static final String TAG = "WelcomeActivity";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

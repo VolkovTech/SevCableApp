@@ -84,8 +84,6 @@ public class CustomerNewsfeedFragment extends Fragment {
             }
         }
         new UICheckAsyncTask().execute();
-
-
     }
 
     public void initRecyclerView(){

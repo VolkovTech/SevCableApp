@@ -1,4 +1,4 @@
-package com.andreyvolkov.sevcableapp.Model.JSONHelper;
+package com.andreyvolkov.sevcableapp.Model;
 
 import org.json.JSONArray;
 import org.json.JSONException;

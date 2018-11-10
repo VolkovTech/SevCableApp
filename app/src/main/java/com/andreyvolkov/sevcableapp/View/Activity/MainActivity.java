@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
         else if (role.equals("user"))
             intent = new Intent(getApplicationContext(), CustomerActivity.class);
         else
-            intent = new Intent(getApplicationContext(), CustomerActivity.class); // change to resident
+            intent = new Intent(getApplicationContext(), ResidentActivity.class); // change to resident
         startActivity(intent);
     }
 
     private String getRoleFromSharedPref() {
         SharedPreferences sharedPref = getSharedPreferences("role", Context.MODE_PRIVATE);
-        return sharedPref.getString("role", null);
+        return sharedPref.getString("role", null); //
     }
 }
