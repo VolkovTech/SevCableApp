@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navResAdd"
+        android:icon="@drawable/res_add"
+        android:title="" />
+    <item
+        android:id="@+id/navResStat"
+        android:icon="@drawable/res_stat"
+        android:title="" />
+    <item
+        android:id="@+id/navResSmth"
+        android:icon="@drawable/res_add"
+        android:title="" />
+</menu>

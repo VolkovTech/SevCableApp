@@ -1,8 +1,6 @@
 package com.andreyvolkov.sevcableapp.View.Activity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -22,7 +20,7 @@ import com.andreyvolkov.sevcableapp.View.Fragment.CustomerSearchFragment;
 import com.andreyvolkov.sevcableapp.View.Helper.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
-public class CustomerActivity extends AppCompatActivity {
+public class ResidentActivity extends AppCompatActivity {
 
     private static final int ACTIVITY_NUM = 1;
     private Toolbar toolbar;
@@ -30,13 +28,13 @@ public class CustomerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer);
+        setContentView(R.layout.activity_resident);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init();
     }
 
     private void init() {
-        BottomNavigationViewEx bottomNavigationViewEx = findViewById(R.id.bottomNavigationCustomer);
+        BottomNavigationViewEx bottomNavigationViewEx = findViewById(R.id.bottomNavigationResident);
         bottomNavigationViewEx.setOnNavigationItemSelectedListener(navListener);
         BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx);
 
@@ -70,7 +68,7 @@ public class CustomerActivity extends AppCompatActivity {
                             getSupportActionBar().setTitle("Мои мероприятия");
                             break;
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.resident_container, selectedFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.customer_container, selectedFragment).commit();
                     return true;
                 }
             };

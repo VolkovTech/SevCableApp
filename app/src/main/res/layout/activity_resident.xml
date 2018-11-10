@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.Activity.CustomerActivity">
+    tools:context=".View.Activity.ResidentActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -15,20 +15,20 @@
         style="@style/Toolbar"/>
 
     <FrameLayout
-        android:id="@+id/customer_container"
+        android:id="@+id/resident_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/sevCabGray"
         android:layout_below="@+id/toolbar"
-        android:layout_above="@+id/bottomNavigationCustomer" />
+        android:layout_above="@+id/bottomNavigationResident" />
 
     <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
-        android:id="@+id/bottomNavigationCustomer"
+        android:id="@+id/bottomNavigationResident"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         app:itemIconTint="@color/bottom_item_foreground"
         android:background="@color/colorPrimary"
-        app:menu="@menu/bottom_navigation_menu_customer" />
+        app:menu="@menu/bottom_navigation_menu_resident" />
 
 </RelativeLayout>

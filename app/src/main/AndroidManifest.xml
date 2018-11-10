@@ -22,6 +22,7 @@
         <activity android:name=".View.Activity.VkAuthActivity" />
         <activity android:name=".View.Activity.WelcomeActivity" />
         <activity android:name=".View.Activity.CustomerActivity" />
+        <activity android:name=".View.Activity.ResidentActivity"></activity>
     </application>
 
 </manifest>

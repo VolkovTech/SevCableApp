@@ -33,6 +33,7 @@ public class CustomerIAmInDialog extends AppCompatDialogFragment {
             @Override
             public void onClick(View v) {
 
+
             }
         });
 
@@ -44,13 +45,6 @@ public class CustomerIAmInDialog extends AppCompatDialogFragment {
         });
 
         builder.setView(view)
-                .setTitle("Login")
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                })
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
