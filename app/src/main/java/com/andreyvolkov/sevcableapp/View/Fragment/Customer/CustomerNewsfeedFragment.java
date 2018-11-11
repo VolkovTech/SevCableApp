@@ -37,12 +37,16 @@ public class CustomerNewsfeedFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.customer_newsfeed_layout, container, false);
-        init(view);
+        try {
+            init(view);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         initRecyclerView();
         return view;
     }
 
-    private void init(View view) {
+    private void init(View view) throws InterruptedException {
         recyclerView = view.findViewById(R.id.customerNewsfeedRecyclerView);
         SharedPreferences sharedPref = this.getActivity().getSharedPreferences("userId", Context.MODE_PRIVATE);
         String userId = sharedPref.getString("id", "");
@@ -85,19 +89,14 @@ public class CustomerNewsfeedFragment extends Fragment {
             }
         }
         new UICheckAsyncTask().execute();
+        Thread.sleep(2000);
     }
 
     public void initRecyclerView(){
-//        eventNames = model.getNames();
-//        eventDescriptions = model.getDescription();
-//        eventDates = model.getDates();
-//        imageViews = model.getImages();
-        for (int i = 0; i < 10; i++) {
-            eventNames.add("Название мероприятия");
-            eventDescriptions.add("Очень пдробное описание мероприятия");
-            eventDates.add("29 ноября, 21:00");
-            imageViews.add("http://getwallpapers.com/wallpaper/full/6/9/c/378569.jpg");
-        }
+        eventNames = model.getNames();
+        eventDescriptions = model.getDescription();
+        eventDates = model.getDates();
+        imageViews = model.getImages();
 
         CustomerRecyclerViewAdapter adapter = new CustomerRecyclerViewAdapter(
                 getContext(), eventNames, eventDescriptions, eventDates, imageViews);

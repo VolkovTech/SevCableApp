@@ -22,7 +22,8 @@
         <activity android:name=".View.Activity.VkAuthActivity" />
         <activity android:name=".View.Activity.WelcomeActivity" />
         <activity android:name=".View.Activity.CustomerActivity" />
-        <activity android:name=".View.Activity.ResidentActivity"></activity>
+        <activity android:name=".View.Activity.ResidentActivity" />
+        <activity android:name=".View.Fragment.Customer.CustomerMap"></activity>
     </application>
 
 </manifest>

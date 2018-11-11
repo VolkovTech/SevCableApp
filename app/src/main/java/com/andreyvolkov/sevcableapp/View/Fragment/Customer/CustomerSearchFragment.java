@@ -1,5 +1,6 @@
 package com.andreyvolkov.sevcableapp.View.Fragment.Customer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -21,6 +22,8 @@ public class CustomerSearchFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.customer_search_layout, container, false);
+        Intent i = new Intent(getContext(), CustomerMap.class);
+        startActivity(i);
         return view;
     }
 

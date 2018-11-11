@@ -64,10 +64,10 @@ public class CustomerRecyclerViewAdapter extends RecyclerView.Adapter<CustomerRe
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Glide.with(context)
-                .asBitmap()
-                .load(eventPhotos.get(position))
-                .into(holder.imageView);
+//        Glide.with(context)
+//                .asBitmap()
+//                .load(eventPhotos.get(position))
+//                .into(holder.imageView);
 
         holder.customerEventName.setText(eventNames.get(position));
         holder.customerEventShortDescription.setText(eventDescriptions.get(position));

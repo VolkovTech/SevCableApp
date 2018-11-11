@@ -1,6 +1,8 @@
 package com.andreyvolkov.sevcableapp.View.Activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
@@ -100,9 +102,15 @@ public class CustomerActivity extends AppCompatActivity {
                 break;
             case R.id.navRightExit:
                 Intent intent = new Intent(this, WelcomeActivity.class);
+                deleteUserFromSp();
                 startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void deleteUserFromSp() {
+        SharedPreferences sp = getSharedPreferences("userId", Context.MODE_PRIVATE);
+        sp.edit().clear().commit();
     }
 }

@@ -40,7 +40,7 @@ public class VkAuthModel implements IVkAuthModel {
         return imageViews;
     }
 
-    private String baseURL = "http://9d5432d8.ngrok.io/";
+    private String baseURL = "http://448769fb.ngrok.io/";
     private String user = "register?vkId=";
     private String wall = "getWall?vkId=";
     private JSONParseHelper parser = new JSONParseHelper();
@@ -63,6 +63,8 @@ public class VkAuthModel implements IVkAuthModel {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
+                System.out.print("Hello!");
+
                 e.printStackTrace();
             }
 

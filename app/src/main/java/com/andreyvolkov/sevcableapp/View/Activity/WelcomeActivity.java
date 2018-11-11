@@ -43,8 +43,8 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void residentLoginButtonClick(View view) {
-        fillSharedPref("resident");
-        intentToAuthActivity();
+//        fillSharedPref("resident");
+//        intentToAuthActivity();
     }
 
     private void intentToAuthActivity() {

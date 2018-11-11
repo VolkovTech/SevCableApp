@@ -2,10 +2,11 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
 
     <TextView
-
+        android:id="@+id/residentAddingEventTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -15,16 +16,97 @@
         android:textColor="@color/colorBlack" />
 
     <LinearLayout
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:id="@+id/residentMainLinearLayout"
+        android:layout_below="@+id/residentAddingEventTitle"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/residentEventNameText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Дата события: "
-            android:textColor="@color/colorPrimaryDark" />
+            android:text="Название:"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/residentEventNameData"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/residentEventDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="Описание:"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/residentEventDescriptionData"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/residentEventDateText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="Дата:"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/residentEventDateData"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/residentEventPhotoText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="Фото:"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/residentEventPhotoData"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/residentEventVkLinkText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="Ссылка ВК:"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/residentEventVkLinkData"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/colorBlack" />
+
+        <Button
+            android:id="@+id/residentSendNewPerformanceButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/customerEventDescription"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/customer_rounded_i_am_in"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:text="Отправить!"/>
 
     </LinearLayout>
+
+
 
 </RelativeLayout>
