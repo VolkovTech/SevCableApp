@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="5dp">
 
     <ImageView
@@ -42,18 +42,44 @@
         android:text="@string/fishFullText"
         android:textColor="@color/colorBlack"/>
 
+    <TextView
+        android:id="@+id/customerPleaseRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/customerEventDescription"
+        android:text="Оставьте отзыв мероприятию:"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorBlack"/>
+
+
+    <EditText
+        android:id="@+id/editTextStars"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Кол-во звёзд от 1 до 5"
+        android:layout_below="@+id/customerPleaseRate"/>
+
+    <EditText
+        android:id="@+id/editTextCommentBI"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Отзывы, пожелания"
+        android:layout_below="@+id/editTextStars"/>
+
     <Button
         android:id="@+id/customerIAmInButton"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/customerEventDescription"
+        android:layout_below="@+id/editTextCommentBI"
         android:layout_centerHorizontal="true"
         android:background="@drawable/customer_rounded_i_am_in"
         android:stateListAnimator="@null"
         android:textAllCaps="false"
         android:textSize="24sp"
-        android:text="Я в деле!"/>
+        android:text="Отправить!"/>
 
 
 </RelativeLayout>

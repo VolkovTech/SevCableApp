@@ -30,10 +30,14 @@ public class CustomerRecyclerViewAdapter extends RecyclerView.Adapter<CustomerRe
     private ArrayList<String> eventPhotos = new ArrayList<>();
     private Context context;
 
-    // vars for dialog
+    // vars for dialog "I am in"
     private Dialog dialogEvents;
     private ImageView imageClose;
-    private Button okButton;
+    private Button iAmInButton;
+
+    // vars for dialog "Rate the event"
+    private Dialog dialogEventsRating;
+    private Button sendRatingButton;
 
     // dialog data
     private TextView customerEventTitle;
@@ -93,17 +97,23 @@ public class CustomerRecyclerViewAdapter extends RecyclerView.Adapter<CustomerRe
     public void openCustomerNewsfeedDialog(Integer position) {
         dialogEvents = new Dialog(context);
         dialogEvents.setContentView(R.layout.customer_layout_dialog);
+
+        dialogEventsRating = new Dialog(context);
+        dialogEventsRating.setContentView(R.layout.customer_layout_dialog_rating);
+
         dialogEvents.show();
 
         imageClose = dialogEvents.findViewById(R.id.customerDialogClose);
-        okButton = dialogEvents.findViewById(R.id.customerIAmInButton);
+        iAmInButton = dialogEvents.findViewById(R.id.customerIAmInButton);
+        customerEventTitle = dialogEvents.findViewById(R.id.customerEventTitle);
+        customerEventDescription = dialogEvents.findViewById(R.id.customerEventDescription);
 
         customerEventTitle.setText(eventNames.get(position));
         customerEventDescription.setText(eventDescriptions.get(position));
 
         customerEventTitle.setTypeface(skRegular);
         customerEventDescription.setTypeface(skRegular);
-        okButton.setTypeface(skRegular);
+        iAmInButton.setTypeface(skRegular);
 
         imageClose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,13 +121,37 @@ public class CustomerRecyclerViewAdapter extends RecyclerView.Adapter<CustomerRe
                 dialogEvents.dismiss();
             }
         });
-        okButton.setOnClickListener(new View.OnClickListener() {
+        iAmInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialogEvents.dismiss();
+                dialogEventsRating.show();
             }
         });
 
+        imageClose = dialogEvents.findViewById(R.id.customerDialogClose);
+        sendRatingButton = dialogEvents.findViewById(R.id.customerIAmInButton);
+        customerEventTitle = dialogEvents.findViewById(R.id.customerEventTitle);
+        customerEventDescription = dialogEvents.findViewById(R.id.customerEventDescription);
+
+        customerEventTitle.setTypeface(skRegular);
+        customerEventDescription.setTypeface(skRegular);
+        sendRatingButton.setTypeface(skRegular);
+
+        imageClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogEventsRating.dismiss();
+            }
+        });
+
+        sendRatingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogEventsRating.dismiss();
+                // send info to db
+            }
+        });
 //        CustomerIAmInDialog customerIAmInDialog = new CustomerIAmInDialog();
 //        customerIAmInDialog.show(((FragmentActivity)context).getSupportFragmentManager(), "customerIAmInDialog");
     }
